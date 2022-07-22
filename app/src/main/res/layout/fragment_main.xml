@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    tools:context=".MainFragment">
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toTopOf="@id/third_digit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="999" />
+
+    <ImageButton
+        android:id="@+id/third_digit_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/baseline_arrow_drop_up_24"
+        app:layout_constraintBottom_toTopOf="@id/third_digit"
+        app:layout_constraintEnd_toStartOf="@id/second_digit_up"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/third_digit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/third_digit_up"
+        app:layout_constraintStart_toStartOf="@id/third_digit_up"
+        app:layout_constraintTop_toBottomOf="@id/result"
+        tools:text="9" />
+
+    <ImageButton
+        android:id="@+id/third_digit_down"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/baseline_arrow_drop_down_24"
+        app:layout_constraintEnd_toStartOf="@id/second_digit_down"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/third_digit" />
+
+    <ImageButton
+        android:id="@+id/second_digit_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/baseline_arrow_drop_up_24"
+        app:layout_constraintBottom_toTopOf="@id/second_digit"
+        app:layout_constraintEnd_toStartOf="@id/first_digit_up"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/third_digit_up" />
+
+    <TextView
+        android:id="@+id/second_digit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/second_digit_up"
+        app:layout_constraintStart_toStartOf="@id/second_digit_up"
+        app:layout_constraintTop_toBottomOf="@id/result"
+        tools:text="9" />
+
+    <ImageButton
+        android:id="@+id/second_digit_down"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/baseline_arrow_drop_down_24"
+        app:layout_constraintEnd_toStartOf="@id/first_digit_down"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/third_digit_down"
+        app:layout_constraintTop_toBottomOf="@id/second_digit" />
+
+    <ImageButton
+        android:id="@+id/first_digit_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/baseline_arrow_drop_up_24"
+        app:layout_constraintBottom_toTopOf="@id/first_digit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/second_digit_up" />
+
+    <TextView
+        android:id="@+id/first_digit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/first_digit_up"
+        app:layout_constraintStart_toStartOf="@id/first_digit_up"
+        app:layout_constraintTop_toBottomOf="@id/result"
+        tools:text="9" />
+
+    <ImageButton
+        android:id="@+id/first_digit_down"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/baseline_arrow_drop_down_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/second_digit_down"
+        app:layout_constraintTop_toBottomOf="@id/first_digit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
